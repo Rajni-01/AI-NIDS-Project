@@ -33,3 +33,10 @@ This project implements an end-to-end, AI-powered modular NIDS that bridges the 
 ---
 
 ## 3. System Architecture & Methodology
+
+The system follows an end-to-end modular pipeline designed for both offline model training and real-time packet capture inference:
+
+1. *Packet Capture & Replay*: Captures live network traffic interfaces or replays archived PCAP files using packet parsing libraries (Scapy/PyShark).
+2. *Feature Extraction*: Aggregates raw packets into 5-tuple network flows (source/destination IPs, ports, protocol) and computes statistical flow metrics (duration, packet counts, inter-arrival times, flag counts) using a CICFlowMeter-style engine.
+3. *Ensemble Classification*: Feeds processed feature vectors into trained machine learning models (LightGBM, XGBoost, and Random Forest) to classify traffic as Benign or one of 14 attack categories, generating confidence scoring.
+4. *Dashboard & Alerting*: Displays real-time security alerts, traffic KPIs, flow logs, and interactive charts via a Streamlit-powered web dashboard.
