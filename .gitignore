@@ -1,0 +1,8 @@
+nids-env/
+data/
+*.csv
+*.pcap
+*.pkl
+*.joblib
+_pycache_/
+.ipynb_checkpoints/
