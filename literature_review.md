@@ -40,3 +40,8 @@ The system follows an end-to-end modular pipeline designed for both offline mode
 2. *Feature Extraction*: Aggregates raw packets into 5-tuple network flows (source/destination IPs, ports, protocol) and computes statistical flow metrics (duration, packet counts, inter-arrival times, flag counts) using a CICFlowMeter-style engine.
 3. *Ensemble Classification*: Feeds processed feature vectors into trained machine learning models (LightGBM, XGBoost, and Random Forest) to classify traffic as Benign or one of 14 attack categories, generating confidence scoring.
 4. *Dashboard & Alerting*: Displays real-time security alerts, traffic KPIs, flow logs, and interactive charts via a Streamlit-powered web dashboard.
+
+## 4. Dashboard & Alerting 
+* *Real-time Monitoring:* The system incorporates an interactive Streamlit web dashboard designed to display real-time security alerts, traffic KPIs, flow logs, and performance charts[cite: 10].
+* *Confidence-Based Alerting:* Threat notifications are filtered using configurable confidence score thresholds (70%, 85%, and 95%) to minimize false-positive fatigue for network analysts[cite: 12].
+* *PCAP File Replay:* In addition to live interface parsing, the dashboard supports uploading and replaying archived PCAP capture files for retrospective security investigations[cite: 10].
