@@ -15,7 +15,7 @@ A network intrusion detection system (NIDS) that learns normal traffic and flags
 
 ## Repository structure
 
-```text
+text
 AI-NIDS-Project/
 ├── data/                    # CIC-IDS2017 CSV files (not tracked by Git)
 ├── notebooks/               # Jupyter notebooks (EDA, training, evaluation)
@@ -26,7 +26,7 @@ AI-NIDS-Project/
 └── README.md
 
 
-SETUP & ENVIRONMENT CONFIGURATION
+## SETUP & ENVIRONMENT CONFIGURATION
 1. Step 1: Install Python 3.12 or later (Tested on Python 3.14).
 
 2. Step 2: Create and activate a virtual environment:
@@ -42,13 +42,13 @@ python src/check_env.py
 5. Step 5: Wireshark Dependency: pyshark requires Wireshark (providing tshark ) installed on the system for
 
 
-DATASET DETAILS
+## DATASET DETAILS
 The project utilizes the benchmark CIC-IDS2017 dataset (Sharafaldin et al., 2018), specifically the
 MachineLearningCSV release containing 8 CSV files and approximately 2.8 million flow records. Download
 the dataset from the Canadian Institute for Cybersecurity portal and place the CSV files inside the data/
 directory.
 
-PROJECT PROGRESS TRACKER
+## PROJECT PROGRESS TRACKER
 Weeks Key Tasks & Deliverables Status
 Week 1 Environment set-up and literature review completion Done
 Week 2 Dataset exploration and class-distribution analysis In progress
@@ -61,10 +61,10 @@ Week 10 Real-time packet processing and PCAP-replay inference testing Planned
 Week 11 Streamlit dashboard development and laboratory testing Planned
 Week 12 Final report documentation, presentation slides, and demo video Planned
 
-ETHICS STATEMENT
+## ETHICS STATEMENT
 The dataset is publicly available and contains no personal identifiable information (PII). All attack generation
 and penetration tools are executed strictly within isolated virtual machines on a controlled lab network, never
 on college or public infrastructure.
 
-LITERATURE REVIEW
+## LITERATURE REVIEW
 For detailed background research, comparative analysis, and academic references, refer to literature review.md
