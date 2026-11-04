@@ -15,7 +15,7 @@ A network intrusion detection system (NIDS) that learns normal traffic and flags
 
 ## Repository structure
 
-text
+```text
 AI-NIDS-Project/
 ├── data/                    # CIC-IDS2017 CSV files (not tracked by Git)
 ├── notebooks/               # Jupyter notebooks (EDA, training, evaluation)
