@@ -44,13 +44,14 @@ AI-NIDS-Project/
    ```bash
    python src/check_env.py
 
-5. pyshark also needs Wireshark (which provides tshark) installed on the machine. It is only needed for packet capture in later weeks.
+5.Wireshark requirement:
+ pyshark also needs Wireshark (which provides tshark) installed on the machine. It is only needed for packet capture in later weeks.
 
-## Dataset
+Dataset
 
 The project uses CIC-IDS2017 (Sharafaldin et al., 2018), the MachineLearningCSV version with 8 CSV files and about 2.8 million flows. Download it from the [Canadian Institute for Cybersecurity datasets page](https://www.unb.ca/cic/datasets/ids-2017.html) and place the CSV files in the data/ folder. The files are not stored in this repository because of their size.
 
-## Progress
+Progress
 
 | Weeks | Work | Status |
 | :--- | :--- | :--- |
@@ -65,10 +66,10 @@ The project uses CIC-IDS2017 (Sharafaldin et al., 2018), the MachineLearningCSV 
 | *11* | Dashboard and laboratory testing | Planned |
 | *12* | Final report, slides and demo video | Planned |
 
-## Ethics
+Ethics
 
 The dataset is public and has no personal data. Attack tools are used only on virtual machines in an isolated lab network, never on the college or public network.
 
-## Literature review
+Literature review
 
 See [literature_review.md](literature_review.md).
