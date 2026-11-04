@@ -1,40 +1,74 @@
-# Literature Review & System Overview: AI-Based Network Intrusion Detection System (NIDS)
+# AI-Powered Network Intrusion Detection System (Phase 1)
 
-## 1. Project Context & Objectives
-* *Problem Statement:* Modern computer networks face growing security threats such as DoS, port scanning, and botnet activity[cite: 6]. Traditional signature-based detection tools like Snort rely heavily on static expert rules, rendering them ineffective against novel or zero-day attacks while generating high false-alarm rates[cite: 7].
-* *Core Objective:* Design and implement a modular, AI-powered NIDS that bridges the gap between offline machine learning model training and real-time network flow inference[cite: 6, 7].
-* *Key Innovation:* Maintaining strict feature-extraction consistency between the training pipeline and live deployment to ensure high detection accuracy on live or replayed traffic[cite: 8].
+*B.Tech CSE (VII Semester) mini project, Birla Institute of Applied Sciences, Bhimtal.*  
+*Mentor:* Mr. Prabhat Prakash, Assistant Professor, Dept. of CSE.  
 
----
+*Team:* Rajni Bisht, Tejashvi Pratap Singh, Vinay Singh Mehra, Vineeta Tiwari, Yogesh Chandra Pant  
 
-## 2. Literature Survey & Academic References
+## What this project does
 
-### A. Benchmark Dataset & Traffic Characterization
-* *CICIDS2017 Dataset Foundation:* Sharafaldin et al. established the CICIDS2017 dataset, recording 5 days of realistic network traffic encompassing benign data and fourteen major attack categories (DoS, brute force, web attacks, botnets, and port scans)[cite: 7].
-* *Dataset Audit & Pipeline Integrity:* Engelen et al. audited the dataset, identifying critical flaws in traffic generation, flow construction, and labeling. Their findings highlight that data integrity and feature extraction pipelines matter just as much as algorithm selection[cite: 7, 8].
+A network intrusion detection system (NIDS) that learns normal traffic and flags attacks. Network traffic is grouped into flows, statistical features are computed, and a machine learning classifier labels each flow as benign or as one of 14 attack types. A Streamlit dashboard shows the result with a confidence score.
 
-### B. Machine Learning Frameworks & Comparative Analysis
-| Study / Reference | Core Focus / Method | Key Findings / Limitations Addressed |
+*Pipeline:* Packet capture -> Flow construction -> Feature extraction -> Classification -> Dashboard  
+
+*Models compared:* LightGBM, XGBoost, and a Random Forest baseline. *Main metric:* Macro F1.  
+
+## Repository structure
+
+```text
+AI-NIDS-Project/
+├── data/                    # CIC-IDS2017 CSV files (not tracked by Git)
+├── notebooks/               # Jupyter notebooks (EDA, training, evaluation)
+├── src/                     # Reusable modules (cleaning, features, inference)
+├── Dashboard/               # Streamlit dashboard
+├── literature_review.md
+├── requirements.txt
+└── README.md
+
+
+## Setup
+
+1. *Install Python 3.12 or later* (tested on Python 3.14).
+
+2. *Create and activate a virtual environment:*
+   ```bash
+   python -m venv nids-env
+   nids-env\Scripts\activate      # Windows
+   source nids-env/bin/activate   # Linux / macOS
+ 
+3. *Install the libraries:*
+   ```bash
+   pip install -r requirements.txt
+
+4. *Check that everything imports:*
+   ```bash
+   python src/check_env.py
+
+5. pyshark also needs Wireshark (which provides tshark) installed on the machine. It is only needed for packet capture in later weeks.
+
+## Dataset
+
+The project uses CIC-IDS2017 (Sharafaldin et al., 2018), the MachineLearningCSV version with 8 CSV files and about 2.8 million flows. Download it from the [Canadian Institute for Cybersecurity datasets page](https://www.unb.ca/cic/datasets/ids-2017.html) and place the CSV files in the data/ folder. The files are not stored in this repository because of their size.
+
+## Progress
+
+| Weeks | Work | Status |
 | :--- | :--- | :--- |
-| *Breiman (2001)* | Random Forests | Serves as a reliable tabular baseline by combining multiple decision trees[cite: 8]. |
-| *Chen & Guestrin (2016)* / *Ke et al. (2017)* | XGBoost & LightGBM | Gradient boosting frameworks providing high accuracy, fast training, and scalable inference speed essential for real-time deployment[cite: 8]. |
-| *Chawla et al. (2002)* | SMOTE & Class Weighting | Mitigates severe class imbalance in rare attack categories (e.g., Heartbleed, Infiltration)[cite: 8]. |
+| *1* | Environment set-up and literature review | Done |
+| *2* | Dataset exploration and class-distribution analysis | In progress |
+| *3* | Data cleaning and merging | Planned |
+| *4* | Stratified splitting and imbalance handling | Planned |
+| *5-6* | Model training and tuning | Planned |
+| *7* | Model evaluation | Planned |
+| *8-9* | PCAP feature extraction (CICFlowMeter) | Planned |
+| *10* | Real-time and PCAP-replay inference | Planned |
+| *11* | Dashboard and laboratory testing | Planned |
+| *12* | Final report, slides and demo video | Planned |
 
-> *Key Takeaway from Literature:* To prevent artificially inflated performance metrics, datasets must undergo strict data cleaning, duplicate removal, and stratified leakage-free splitting[cite: 8].
+## Ethics
 
----
+The dataset is public and has no personal data. Attack tools are used only on virtual machines in an isolated lab network, never on the college or public network.
 
-## 3. System Architecture & Methodology
-The system architecture follows a modular 5-stage pipeline:
-1. *Packet Capture:* Capturing live interface traffic or parsing .pcap files utilizing Scapy or PyShark[cite: 10].
-2. *Flow Construction:* Aggregating raw packets into 5-tuples (Source IP, Destination IP, Source Port, Destination Port, Protocol)[cite: 6, 10].
-3. *Feature Extraction:* Computing CICFlowMeter-style statistical metrics such as duration, packet counts, inter-arrival times, and TCP flags[cite: 6, 10].
-4. *Classification:* Running preprocessed vectors through trained LightGBM, XGBoost, or Random Forest models to categorize traffic into benign or specific attack classes[cite: 7, 10].
-5. *Dashboard Visualization:* Displaying predictions, confidence scores, and analytics on an interactive interface[cite: 6, 10].
+## Literature review
 
----
-
-## 4. Dashboard & Alerting System
-* *Real-time Monitoring:* Integrates a Streamlit-powered web dashboard to present live traffic KPIs, flow logs, and performance visualizations[cite: 10, 12].
-* *Confidence-Based Alerting:* Applies configurable confidence thresholds (70%, 85%, and 95%) to minimize analyst alert fatigue[cite: 12].
-* *PCAP File Replay:* Supports retrospective security investigation by allowing users to upload and analyze historical capture files[cite: 10].
+See [literature_review.md](literature_review.md).
