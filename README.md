@@ -60,7 +60,7 @@ The project uses CIC-IDS2017 (Sharafaldin et al., 2018), the **MachineLearningCS
 | Weeks | Work | Status |
 |---|---|---|
 | 1 | Environment set-up and literature review | Done |
-| 2 | Dataset exploration and class-distribution analysis | In progress |
+| 2 | Dataset exploration and class-distribution analysis | Done |
 | 3 | Data cleaning and merging | Planned |
 | 4 | Stratified splitting and imbalance handling | Planned |
 | 5-6 | Model training and tuning | Planned |
