@@ -1,8 +1,26 @@
+# Python environment
 nids-env/
+
+# Dataset files
 data/
+
+# Ignore CSV files except project reports
 *.csv
+!reports/*.csv
+
+# Ignore PCAP files
 *.pcap
+*.pcapng
+
+# Ignore model files except selected trained models
 *.pkl
+!models/*.pkl
+
+# Ignore joblib files
 *.joblib
-_pycache_/
+
+# Python cache
+__pycache__/
+
+# Jupyter checkpoints
 .ipynb_checkpoints/
