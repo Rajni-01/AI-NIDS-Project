@@ -1,0 +1,79 @@
+Training Feature,CICFlowMeter Feature,Mapping Status,Note
+Destination Port,Dst Port,Name Mapped,Equivalent CICFlowMeter column name
+Flow Duration,Flow Duration,Exact Match,Same column name
+Total Fwd Packets,Total Fwd Packet,Name Mapped,Equivalent CICFlowMeter column name
+Total Backward Packets,Total Bwd packets,Name Mapped,Equivalent CICFlowMeter column name
+Total Length of Fwd Packets,Total Length of Fwd Packet,Name Mapped,Equivalent CICFlowMeter column name
+Total Length of Bwd Packets,Total Length of Bwd Packet,Name Mapped,Equivalent CICFlowMeter column name
+Fwd Packet Length Max,Fwd Packet Length Max,Exact Match,Same column name
+Fwd Packet Length Min,Fwd Packet Length Min,Exact Match,Same column name
+Fwd Packet Length Mean,Fwd Packet Length Mean,Exact Match,Same column name
+Fwd Packet Length Std,Fwd Packet Length Std,Exact Match,Same column name
+Bwd Packet Length Max,Bwd Packet Length Max,Exact Match,Same column name
+Bwd Packet Length Min,Bwd Packet Length Min,Exact Match,Same column name
+Bwd Packet Length Mean,Bwd Packet Length Mean,Exact Match,Same column name
+Bwd Packet Length Std,Bwd Packet Length Std,Exact Match,Same column name
+Flow Bytes/s,Flow Bytes/s,Exact Match,Same column name
+Flow Packets/s,Flow Packets/s,Exact Match,Same column name
+Flow IAT Mean,Flow IAT Mean,Exact Match,Same column name
+Flow IAT Std,Flow IAT Std,Exact Match,Same column name
+Flow IAT Max,Flow IAT Max,Exact Match,Same column name
+Flow IAT Min,Flow IAT Min,Exact Match,Same column name
+Fwd IAT Total,Fwd IAT Total,Exact Match,Same column name
+Fwd IAT Mean,Fwd IAT Mean,Exact Match,Same column name
+Fwd IAT Std,Fwd IAT Std,Exact Match,Same column name
+Fwd IAT Max,Fwd IAT Max,Exact Match,Same column name
+Fwd IAT Min,Fwd IAT Min,Exact Match,Same column name
+Bwd IAT Total,Bwd IAT Total,Exact Match,Same column name
+Bwd IAT Mean,Bwd IAT Mean,Exact Match,Same column name
+Bwd IAT Std,Bwd IAT Std,Exact Match,Same column name
+Bwd IAT Max,Bwd IAT Max,Exact Match,Same column name
+Bwd IAT Min,Bwd IAT Min,Exact Match,Same column name
+Fwd PSH Flags,Fwd PSH Flags,Exact Match,Same column name
+Bwd PSH Flags,Bwd PSH Flags,Exact Match,Same column name
+Fwd URG Flags,Fwd URG Flags,Exact Match,Same column name
+Bwd URG Flags,Bwd URG Flags,Exact Match,Same column name
+Fwd Header Length,Fwd Header Length,Exact Match,Same column name
+Bwd Header Length,Bwd Header Length,Exact Match,Same column name
+Fwd Packets/s,Fwd Packets/s,Exact Match,Same column name
+Bwd Packets/s,Bwd Packets/s,Exact Match,Same column name
+Min Packet Length,Packet Length Min,Name Mapped,Equivalent CICFlowMeter column name
+Max Packet Length,Packet Length Max,Name Mapped,Equivalent CICFlowMeter column name
+Packet Length Mean,Packet Length Mean,Exact Match,Same column name
+Packet Length Std,Packet Length Std,Exact Match,Same column name
+Packet Length Variance,Packet Length Variance,Exact Match,Same column name
+FIN Flag Count,FIN Flag Count,Exact Match,Same column name
+SYN Flag Count,SYN Flag Count,Exact Match,Same column name
+RST Flag Count,RST Flag Count,Exact Match,Same column name
+PSH Flag Count,PSH Flag Count,Exact Match,Same column name
+ACK Flag Count,ACK Flag Count,Exact Match,Same column name
+URG Flag Count,URG Flag Count,Exact Match,Same column name
+CWE Flag Count,CWR Flag Count,Name Mapped,Equivalent CICFlowMeter column name
+ECE Flag Count,ECE Flag Count,Exact Match,Same column name
+Down/Up Ratio,Down/Up Ratio,Exact Match,Same column name
+Average Packet Size,Average Packet Size,Exact Match,Same column name
+Avg Fwd Segment Size,Fwd Segment Size Avg,Name Mapped,Equivalent CICFlowMeter column name
+Avg Bwd Segment Size,Bwd Segment Size Avg,Name Mapped,Equivalent CICFlowMeter column name
+Fwd Header Length.1,Fwd Header Length,Duplicate,Identical to Fwd Header Length
+Fwd Avg Bytes/Bulk,Fwd Bytes/Bulk Avg,Name Mapped,Equivalent CICFlowMeter column name
+Fwd Avg Packets/Bulk,Fwd Packet/Bulk Avg,Name Mapped,Equivalent CICFlowMeter column name
+Fwd Avg Bulk Rate,Fwd Bulk Rate Avg,Name Mapped,Equivalent CICFlowMeter column name
+Bwd Avg Bytes/Bulk,Bwd Bytes/Bulk Avg,Name Mapped,Equivalent CICFlowMeter column name
+Bwd Avg Packets/Bulk,Bwd Packet/Bulk Avg,Name Mapped,Equivalent CICFlowMeter column name
+Bwd Avg Bulk Rate,Bwd Bulk Rate Avg,Name Mapped,Equivalent CICFlowMeter column name
+Subflow Fwd Packets,Subflow Fwd Packets,Exact Match,Same column name
+Subflow Fwd Bytes,Subflow Fwd Bytes,Exact Match,Same column name
+Subflow Bwd Packets,Subflow Bwd Packets,Exact Match,Same column name
+Subflow Bwd Bytes,Subflow Bwd Bytes,Exact Match,Same column name
+Init_Win_bytes_forward,FWD Init Win Bytes,Name Mapped,Equivalent CICFlowMeter column name
+Init_Win_bytes_backward,Bwd Init Win Bytes,Name Mapped,Equivalent CICFlowMeter column name
+act_data_pkt_fwd,Fwd Act Data Pkts,Name Mapped,Equivalent CICFlowMeter column name
+min_seg_size_forward,Fwd Seg Size Min,Name Mapped,Equivalent CICFlowMeter column name
+Active Mean,Active Mean,Exact Match,Same column name
+Active Std,Active Std,Exact Match,Same column name
+Active Max,Active Max,Exact Match,Same column name
+Active Min,Active Min,Exact Match,Same column name
+Idle Mean,Idle Mean,Exact Match,Same column name
+Idle Std,Idle Std,Exact Match,Same column name
+Idle Max,Idle Max,Exact Match,Same column name
+Idle Min,Idle Min,Exact Match,Same column name
