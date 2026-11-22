@@ -1,0 +1,16 @@
+{
+    "PCAP_File": "Thursday_Sample_10000.pcap",
+    "Extracted_Flows": 636,
+    "Training_Features": 78,
+    "Reference_Shape": [
+        636,
+        78
+    ],
+    "Test_Shape": [
+        636,
+        78
+    ],
+    "Feature_Order_Matches": true,
+    "Feature_Values_Match": true,
+    "Verification_Status": "Successful"
+}
