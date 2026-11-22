@@ -95,7 +95,7 @@ Place the CSV files in the `data/` folder. Dataset files are not stored in this 
 | 9 | Feature consistency and repeatability verification | Done |
 | 10 | PCAP-based inference using trained XGBoost model | Done |
 | 11 | Dashboard and backend integration, laboratory testing | Pending |
-| 12 | Final report, slides and demo video | Pending |
+| 12 | Final report, slides and demo video | Done |
 
 ## Model evaluation
 
