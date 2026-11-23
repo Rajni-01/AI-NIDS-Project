@@ -71,6 +71,18 @@ pip install -r requirements.txt
 4. CICFlowMeter also requires Java 8 and its native dependencies.
 5. Wireshark/tshark may be required for packet capture and processing workflows.
 
+### Running the Dashboard
+
+Launch the integrated Sentinel Security Operations dashboard:
+
+```bash
+streamlit run frontend/app.py
+```
+Or alternatively:
+```bash
+streamlit run Dashboard/app.py
+```
+
 ## Dataset
 
 The project uses CIC-IDS2017 (Sharafaldin et al., 2018), specifically the MachineLearningCSV version containing 8 CSV files and approximately 2.8 million network flows.
@@ -94,7 +106,7 @@ Place the CSV files in the `data/` folder. Dataset files are not stored in this 
 | 8 | PCAP feature extraction using CICFlowMeter | Done |
 | 9 | Feature consistency and repeatability verification | Done |
 | 10 | PCAP-based inference using trained XGBoost model | Done |
-| 11 | Dashboard and backend integration, laboratory testing | Pending |
+| 11 | Dashboard and backend integration, laboratory testing | Done |
 | 12 | Final report, slides and demo video | Done |
 
 ## Model evaluation
